@@ -1,0 +1,31 @@
+---
+title: "PAP"
+author: "Mohamed"
+date: "20/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+install.packages("plotly")
+
+#loading 
+```{r , eval=FALSE}
+library(plotly)
+```
+
+#Plotting
+
+```{r , eval=FALSE}
+plot_ly(z=volcano, type="surface")
+```
+
+#Plotting
+
+```{r , eval=FALSE}
+p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p
+```
