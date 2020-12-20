@@ -5,27 +5,57 @@ date: "20/12/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+
+```{r setup, include=FALSE,message=FALSE,warning=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE,
+	cache = TRUE,
+	tidy = TRUE,
+	tidy.opts = list(width.cutoff = 60)
+)
 ```
 
+## Synopsis {.smaller}
 
-install.packages("plotly")
+Following instructions have been given for the assignment -  for volcano 
 
-#loading 
-```{r , eval=FALSE}
-library(plotly)
+
+
+## Data Processing for Plot 1 :Volcano
+
+```{r results='hide'}
+plot_ly(z=volcano, type="surface")
+## Plotly command
+
 ```
 
-#Plotting
+## Plotly - Interactive Plot 1: volcano
 
-```{r , eval=FALSE}
+```{r echo=FALSE}
+
+
 plot_ly(z=volcano, type="surface")
 ```
 
-#Plotting
+## Plot 2 
 
-```{r , eval=FALSE}
+```{r results='hide'}
+
 p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
 p
+
 ```
+
+## Plotly - Interactive Plot 2
+
+```{r echo=FALSE}
+
+p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")
+p
+
+```
+
+## Thank You!
